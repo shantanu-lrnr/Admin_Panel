@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# 📊 Antigravity Admin Panel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, modern, and interactive administrator dashboard built with React, TypeScript, and Tailwind CSS. Featuring dynamic charts, settings panel, recent activity streams, custom data tables, and an integrated AI Assistant powered by Gemini.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Preview
 
-## React Compiler
+![Admin Panel Preview](./images/admin%20panel.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **💡 AI Assistant**: An interactive AI chat assistant directly in your dashboard to help query insights, manage workflows, and get instant suggestions.
+- **📈 Rich Analytics**: Dynamic, responsive data visualizations using Recharts representing monthly metrics, revenue streams, and performance stats.
+- **🗂️ Interactive Data Table**: Comprehensive table component with search, filtering, and sorting capabilities for handling large datasets.
+- **⚙️ Settings Interface**: Highly custom settings configurations for managing user profiles, theme toggles, system notifications, and security protocols.
+- **🔔 Real-time Activity Log**: Chronological activity feed tracking user actions, security alerts, and system updates.
+- **⚡ Modern Design System**: Built with glassmorphism, responsive grid layouts, and micro-animations via Framer Motion.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Framework**: [React 19](https://react.dev/) with [Vite 8](https://vite.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📥 Getting Started
+
+### ⚙️ Setup & Execution
+
+1. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Run the local development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Build the application for production:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📁 Project Structure
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+├── public/                 # Static public assets
+├── images/                 # Project documentation screenshots
+│   └── admin panel.png     # Dashboard preview screenshot
+├── src/
+│   ├── assets/             # Images, fonts, and styling assets
+│   ├── components/         # Reusable dashboard UI widgets
+│   │   ├── AIAssistant.tsx # Interactive AI chat component
+│   │   ├── ChartsSection.tsx # Recharts visualization layouts
+│   │   ├── DataTable.tsx   # Sortable and searchable grid data
+│   │   ├── RecentActivity.tsx # Log activity flow list
+│   │   ├── SettingsUI.tsx  # User & system options screen
+│   │   ├── Sidebar.tsx     # Collapsible navigation drawer
+│   │   ├── StatCards.tsx   # Metric overview panels
+│   │   └── Topbar.tsx      # App header with notification panel
+│   ├── context/            # React global context providers
+│   ├── utils/              # Helper functions & utility files
+│   ├── App.tsx             # Root template & layout orchestration
+│   ├── index.css           # Global custom stylesheet
+│   └── main.tsx            # React application entrypoint
 ```
